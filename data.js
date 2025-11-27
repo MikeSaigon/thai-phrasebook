@@ -8,8 +8,8 @@ const categories = [
     { id: 'shopping', name: 'Shopping at Foodlands', image: '/thai-phrasebook/images/seafood.jpeg' },
     { id: 'fruits', name: 'Fruits', image: '/thai-phrasebook/images/fruit.jpeg' },
     { id: 'vegetables', name: 'Vegetables', image: '/thai-phrasebook/images/vegetables.JPG' },
-    { id: 'household', name: 'Household Objects', image: '/thai-phrasebook/images/household.jpeg' },
-    { id: 'useful_phrases', name: 'Useful Phrases using the vocabulary learned in this app', image: '/thai-phrasebook/images/conversation.jpeg' }
+    { id: 'household', name: 'Household Objects', image: '/thai-phrasebook/images/householdobjects.jpeg' },
+    { id: 'useful_phrases', name: 'Useful Phrases using the vocabulary learned in this app', image: '/thai-phrasebook/images/usefulphrases.jpeg' }
 ];
 
 const phrases = [
