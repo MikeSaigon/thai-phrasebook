@@ -109,6 +109,13 @@ document.addEventListener('DOMContentLoaded', () => {
             img.src = category.image;
             img.alt = category.name;
             imgContainer.style.display = 'block';
+
+            // Apply contain-image class for household category to prevent zooming/cropping
+            if (categoryId === 'household') {
+                img.classList.add('contain-image');
+            } else {
+                img.classList.remove('contain-image');
+            }
         } else {
             imgContainer.style.display = 'none';
         }

@@ -4,7 +4,7 @@ const categories = [
     { id: 'food', name: 'Eating out', image: '/thai-phrasebook/images/noodles.jpeg' },
     { id: 'friends', name: 'Meeting new friends', image: '/thai-phrasebook/images/drinks.jpeg' },
     { id: 'dishes', name: 'Famous Dishes', image: '/thai-phrasebook/images/seafood.jpeg' },
-    { id: 'nightlife', name: 'Evening Out', image: '/thai-phrasebook/images/soup.jpeg' },
+    { id: 'nightlife', name: 'Evening Out', image: '/thai-phrasebook/images/friends.jpeg' },
     { id: 'shopping', name: 'Shopping at Foodlands', image: '/thai-phrasebook/images/seafood.jpeg' },
     { id: 'fruits', name: 'Fruits', image: '/thai-phrasebook/images/fruit.jpeg' },
     { id: 'vegetables', name: 'Vegetables', image: '/thai-phrasebook/images/vegetables.JPG' },
