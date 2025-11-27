@@ -36,7 +36,8 @@ async def generate_audio(thai_text, filename):
     
     cmd = [
         edge_tts_path,
-        "--voice", "th-TH-PremwadeeNeural", # Good Thai voice
+        "--voice", "th-TH-PremwadeeNeural",
+        "--rate=-20%", 
         "--text", thai_text,
         "--write-media", output_path
     ]
