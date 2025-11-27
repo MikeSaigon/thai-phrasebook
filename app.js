@@ -120,6 +120,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function playAudio(audioFile, phraseText) {
+        // iOS Safari requires direct user interaction for TTS.
+        // Since audio.play() is async, the fallback might be blocked.
+        // We "prime" the TTS engine synchronously to ensure it's ready if we need to fallback.
+        if ('speechSynthesis' in window) {
+            const empty = new SpeechSynthesisUtterance('');
+            empty.volume = 0;
+            window.speechSynthesis.speak(empty);
+        }
+
+        // Try to play audio file first
+        if (audioFile) {
+            const audio = new Audio(`audio/${audioFile}`);
+
+            // Visual feedback
+            const buttons = document.querySelectorAll('.audio-btn');
+            // We don't have direct access to the clicked button here easily without passing it, 
+            // but we can just play the sound. 
+
+            audio.play()
+                .then(() => {
+                    console.log(`Playing audio file: ${audioFile}`);
+                    // Cancel the empty utterance if audio plays successfully (optional, but good cleanup)
+                    window.speechSynthesis.cancel();
+                })
+                .catch(e => {
+                    console.warn(`Audio file playback failed (${audioFile}), falling back to TTS:`, e);
+                    speakText(phraseText);
+                });
+        } else {
+            speakText(phraseText);
+        }
+    }
+
+    function speakText(text) {
         if (!('speechSynthesis' in window)) {
             alert('Sorry, your browser does not support text-to-speech.');
             return;
@@ -128,20 +162,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Cancel any currently playing speech
         window.speechSynthesis.cancel();
 
-        const utterance = new SpeechSynthesisUtterance(phraseText);
+        const utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = 'th-TH'; // Thai language code
         utterance.rate = 0.9; // Slightly slower for better clarity
 
-        // visual feedback
-        const buttons = document.querySelectorAll('.audio-btn');
-        buttons.forEach(btn => btn.classList.remove('playing'));
-
-        // Find the button that triggered this (not passed directly, but we can infer or just animate current)
-        // For simplicity in this context, we'll just log it, but let's try to add a class to the active button if possible.
-        // Since we don't have the event target here easily without changing signature, we will handle global state or just play.
-
         utterance.onstart = () => {
-            console.log(`Speaking: ${phraseText}`);
+            console.log(`Speaking (TTS): ${text}`);
         };
 
         utterance.onerror = (e) => {
