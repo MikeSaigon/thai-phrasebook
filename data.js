@@ -9,6 +9,10 @@ const categories = [
     { id: 'fruits', name: 'Fruits', image: '/thai-phrasebook/images/fruit.jpeg' },
     { id: 'vegetables', name: 'Vegetables', image: '/thai-phrasebook/images/vegetables.JPG' },
     { id: 'household', name: 'Household Objects', image: '/thai-phrasebook/images/householdobjects.jpeg' },
+    { id: 'infrastructure', name: 'Infrastructure', image: '/thai-phrasebook/images/infrastructure.jpeg' },
+    { id: 'nature', name: 'Nature', image: '/thai-phrasebook/images/nature.jpeg' },
+    { id: 'animals', name: 'Animals', image: '/thai-phrasebook/images/animals.jpeg' },
+    { id: 'grammar', name: 'Basic Grammar', image: '/thai-phrasebook/images/grammar.jpeg', lessonId: 'tones' },
     { id: 'useful_phrases', name: 'Useful Phrases using the vocabulary learned in this app', image: '/thai-phrasebook/images/usefulphrases.jpeg' }
 ];
 
@@ -1260,5 +1264,326 @@ const phrases = [
         transliteration: 'Mâe yùu têe bâan',
         english: 'My mother is at home',
         audio: 'mother_at_home.mp3'
+    },
+
+    // Basic Grammar
+    {
+        category: 'grammar',
+        thai: 'ฉัน กิน ข้าว',
+        transliteration: 'Chǎn gin kâao',
+        english: 'Subject + Verb + Object (I eat rice)',
+        audio: 'grammar_svo.mp3'
+    },
+    {
+        category: 'grammar',
+        thai: 'แมว สีดำ',
+        transliteration: 'Maew sǐi-dam',
+        english: 'Noun + Adjective (Cat black)',
+        audio: 'grammar_adj.mp3'
+    },
+    {
+        category: 'grammar',
+        thai: 'ไป ไหน?',
+        transliteration: 'Bpaii nǎi?',
+        english: 'Statement + Question Word (Go where?)',
+        audio: 'grammar_question.mp3'
+    },
+    {
+        category: 'grammar',
+        thai: 'ครับ / ค่ะ',
+        transliteration: 'Kráp / Kâ',
+        english: 'Polite Particles (Male / Female)',
+        audio: 'grammar_polite.mp3'
+    },
+    {
+        category: 'grammar',
+        thai: 'กิน แล้ว',
+        transliteration: 'Gin láeo',
+        english: 'Past Tense: Verb + "Already" (Eat already)',
+        audio: 'grammar_past.mp3'
+    },
+    {
+        category: 'grammar',
+        thai: 'จะ ไป',
+        transliteration: 'Jà bpaii',
+        english: 'Future Tense: "Will" + Verb (Will go)',
+        audio: 'grammar_future.mp3'
+    },
+    {
+        category: 'grammar',
+        thai: 'ไม่ เผ็ด',
+        transliteration: 'Mâi pèt',
+        english: 'Negation: "No" + Adjective/Verb (Not spicy)',
+        audio: 'grammar_negation.mp3'
+    },
+
+    // Infrastructure
+    {
+        category: 'infrastructure',
+        thai: 'ธนาคาร',
+        transliteration: 'Tá-naa-kaan',
+        english: 'Bank',
+        audio: 'bank.mp3'
+    },
+    {
+        category: 'infrastructure',
+        thai: 'ที่ทำงาน',
+        transliteration: 'Têe tam-ngaan',
+        english: 'Office / Workplace',
+        audio: 'office.mp3'
+    },
+    {
+        category: 'infrastructure',
+        thai: 'คอนโด',
+        transliteration: 'Con-doh',
+        english: 'Condo',
+        audio: 'condo.mp3'
+    },
+    {
+        category: 'infrastructure',
+        thai: 'อพาร์ตเมนต์',
+        transliteration: 'A-pâat-mén',
+        english: 'Apartment',
+        audio: 'apartment.mp3'
+    },
+    {
+        category: 'infrastructure',
+        thai: 'สะพาน',
+        transliteration: 'Sà-paan',
+        english: 'Bridge',
+        audio: 'bridge.mp3'
+    },
+    {
+        category: 'infrastructure',
+        thai: 'โรงพยาบาล',
+        transliteration: 'Rohng pá-yaa-baan',
+        english: 'Hospital',
+        audio: 'hospital.mp3'
+    },
+    {
+        category: 'infrastructure',
+        thai: 'สถานีตำรวจ',
+        transliteration: 'Sà-tǎa-nee dtam-rùat',
+        english: 'Police Station',
+        audio: 'police_station.mp3'
+    },
+    {
+        category: 'infrastructure',
+        thai: 'โรงเรียน',
+        transliteration: 'Rohng rian',
+        english: 'School',
+        audio: 'school.mp3'
+    },
+    {
+        category: 'infrastructure',
+        thai: 'โรงแรม',
+        transliteration: 'Rohng raem',
+        english: 'Hotel',
+        audio: 'hotel.mp3'
+    },
+    {
+        category: 'infrastructure',
+        thai: 'สวนสาธารณะ',
+        transliteration: 'Sǔan sǎa-taa-rá-ná',
+        english: 'Park',
+        audio: 'park.mp3'
+    },
+
+    // Nature
+    {
+        category: 'nature',
+        thai: 'ภูเขา',
+        transliteration: 'Puu-kǎo',
+        english: 'Mountain',
+        audio: 'mountain.mp3'
+    },
+    {
+        category: 'nature',
+        thai: 'แม่น้ำ',
+        transliteration: 'Mâe-náam',
+        english: 'River',
+        audio: 'river.mp3'
+    },
+    {
+        category: 'nature',
+        thai: 'ทะเล',
+        transliteration: 'Tá-lay',
+        english: 'Sea',
+        audio: 'sea.mp3'
+    },
+    {
+        category: 'nature',
+        thai: 'พระอาทิตย์',
+        transliteration: 'Prá aa-tít',
+        english: 'Sun',
+        audio: 'sun.mp3'
+    },
+    {
+        category: 'nature',
+        thai: 'พระจันทร์',
+        transliteration: 'Prá jan',
+        english: 'Moon',
+        audio: 'moon.mp3'
+    },
+    {
+        category: 'nature',
+        thai: 'ฝน',
+        transliteration: 'Fǒn',
+        english: 'Rain',
+        audio: 'rain.mp3'
+    },
+    {
+        category: 'nature',
+        thai: 'ต้นไม้',
+        transliteration: 'Dtôn-mái',
+        english: 'Tree',
+        audio: 'tree.mp3'
+    },
+    {
+        category: 'nature',
+        thai: 'ดอกไม้',
+        transliteration: 'Dòrk-mái',
+        english: 'Flower',
+        audio: 'flower.mp3'
+    },
+    {
+        category: 'nature',
+        thai: 'ท้องฟ้า',
+        transliteration: 'Tóng-fáa',
+        english: 'Sky',
+        audio: 'sky.mp3'
+    },
+    {
+        category: 'nature',
+        thai: 'น้ำตก',
+        transliteration: 'Náam-dtòk',
+        english: 'Waterfall',
+        audio: 'waterfall.mp3'
+    },
+
+    // Animals
+    {
+        category: 'animals',
+        thai: 'หมา',
+        transliteration: 'Mǎa',
+        english: 'Dog',
+        audio: 'dog.mp3'
+    },
+    {
+        category: 'animals',
+        thai: 'แมว',
+        transliteration: 'Maew',
+        english: 'Cat',
+        audio: 'cat.mp3'
+    },
+    {
+        category: 'animals',
+        thai: 'นก',
+        transliteration: 'Nók',
+        english: 'Bird',
+        audio: 'bird.mp3'
+    },
+    {
+        category: 'animals',
+        thai: 'ปลา',
+        transliteration: 'Bplaa',
+        english: 'Fish',
+        audio: 'fish.mp3'
+    },
+    {
+        category: 'animals',
+        thai: 'ช้าง',
+        transliteration: 'Cháang',
+        english: 'Elephant',
+        audio: 'elephant.mp3'
+    },
+    {
+        category: 'animals',
+        thai: 'ลิง',
+        transliteration: 'Ling',
+        english: 'Monkey',
+        audio: 'monkey.mp3'
+    },
+    {
+        category: 'animals',
+        thai: 'งู',
+        transliteration: 'Nguu',
+        english: 'Snake',
+        audio: 'snake.mp3'
+    },
+    {
+        category: 'animals',
+        thai: 'ยุง',
+        transliteration: 'Yung',
+        english: 'Mosquito',
+        audio: 'mosquito.mp3'
+    },
+    {
+        category: 'animals',
+        thai: 'ไก่',
+        transliteration: 'Gài',
+        english: 'Chicken',
+        audio: 'chicken.mp3'
+    },
+    {
+        category: 'animals',
+        thai: 'ควาย',
+        transliteration: 'Kwaai',
+        english: 'Buffalo',
+        audio: 'buffalo.mp3'
     }
 ];
+
+const grammarLessons = {
+    tones: {
+        title: "Introduction to Thai Tones",
+        content: `
+            <div class="lesson-content">
+                <p>Thai is a tonal language, which means the pitch you use when saying a word changes its meaning. There are 5 tones in Thai:</p>
+                
+                <div class="tone-list">
+                    <div class="tone-item">
+                        <h3>1. Mid Tone (เสียงสามัญ)</h3>
+                        <p>Spoken in a flat, middle pitch. No tone mark is usually used.</p>
+                        <p class="example">Example: <strong>มา</strong> (maa) - to come</p>
+                    </div>
+                    
+                    <div class="tone-item">
+                        <h3>2. Low Tone (เสียงเอก)</h3>
+                        <p>Spoken in a low, flat pitch.</p>
+                        <p class="example">Example: <strong>ใหม่</strong> (mài) - new</p>
+                    </div>
+                    
+                    <div class="tone-item">
+                        <h3>3. Falling Tone (เสียงโท)</h3>
+                        <p>Starts high and falls sharply to a low pitch. Like saying "No!" emphatically.</p>
+                        <p class="example">Example: <strong>ไม่</strong> (mâi) - no</p>
+                    </div>
+                    
+                    <div class="tone-item">
+                        <h3>4. High Tone (เสียงตรี)</h3>
+                        <p>Spoken in a high pitch, higher than your normal voice.</p>
+                        <p class="example">Example: <strong>ม้า</strong> (máa) - horse</p>
+                    </div>
+                    
+                    <div class="tone-item">
+                        <h3>5. Rising Tone (เสียงจัตวา)</h3>
+                        <p>Starts low and rises to a high pitch. Like asking "Really?" in English.</p>
+                        <p class="example">Example: <strong>หมา</strong> (mǎa) - dog</p>
+                    </div>
+                </div>
+
+                <div class="lesson-note">
+                    <strong>Why is this important?</strong><br>
+                    Getting the tone wrong can change the meaning completely! For example:
+                    <ul>
+                        <li><strong>mái</strong> (High tone) = wood</li>
+                        <li><strong>mài</strong> (Low tone) = new</li>
+                        <li><strong>mâi</strong> (Falling tone) = not/no</li>
+                        <li><strong>mǎi</strong> (Rising tone) = silk</li>
+                    </ul>
+                </div>
+            </div>
+        `
+    }
+};

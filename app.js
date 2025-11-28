@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const categoryNav = document.getElementById('categoryNav');
     const phraseList = document.getElementById('phraseList');
+    const modal = document.getElementById('lessonModal');
+    const closeModal = document.querySelector('.close-modal');
     let activeCategory = null;
 
     // Initialize App
@@ -26,6 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (categories.length > 0) {
             selectCategory(categories[0].id);
         }
+
+        // Modal Close Event
+        closeModal.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     }
 
     function filterPhrases(query) {
@@ -44,8 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
         renderPhraseList(filtered);
     }
 
-    function renderPhraseList(phrasesToRender) {
-        phraseList.innerHTML = '';
+    function renderPhraseList(phrasesToRender, clearList = true) {
+        if (clearList) {
+            phraseList.innerHTML = '';
+        }
 
         if (phrasesToRender.length === 0) {
             phraseList.innerHTML = '<div class="empty-state">No phrases found.</div>';
@@ -122,8 +136,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderPhrases(categoryId) {
+        const category = categories.find(c => c.id === categoryId);
         const filteredPhrases = phrases.filter(p => p.category === categoryId);
-        renderPhraseList(filteredPhrases);
+
+        phraseList.innerHTML = '';
+
+        // Check if category has a lesson
+        if (category && category.lessonId) {
+            const lessonBtn = document.createElement('button');
+            lessonBtn.className = 'view-lesson-btn';
+            lessonBtn.innerHTML = `
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                </svg>
+                View Lesson: ${grammarLessons[category.lessonId].title}
+            `;
+            lessonBtn.onclick = () => openLesson(category.lessonId);
+            phraseList.appendChild(lessonBtn);
+        }
+
+        renderPhraseList(filteredPhrases, false); // Pass false to not clear innerHTML
+    }
+
+    function openLesson(lessonId) {
+        const lesson = grammarLessons[lessonId];
+        if (lesson) {
+            document.getElementById('lessonTitle').textContent = lesson.title;
+            document.getElementById('lessonBody').innerHTML = lesson.content;
+            modal.style.display = "block";
+        }
     }
 
     function playAudio(audioFile, phraseText) {
