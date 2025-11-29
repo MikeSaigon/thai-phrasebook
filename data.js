@@ -13,6 +13,7 @@ const categories = [
     { id: 'nature', name: 'Nature', image: '/thai-phrasebook/images/nature.jpeg' },
     { id: 'animals', name: 'Animals', image: '/thai-phrasebook/images/animals.jpeg' },
     { id: 'grammar', name: 'Basic Grammar', image: '/thai-phrasebook/images/grammar.jpeg', lessonId: 'tones' },
+    { id: 'condo', name: 'At the Condo', image: '/thai-phrasebook/images/condo.jpeg' },
     { id: 'useful_phrases', name: 'Useful Phrases using the vocabulary learned in this app', image: '/thai-phrasebook/images/usefulphrases.jpeg' }
 ];
 
@@ -794,6 +795,92 @@ const phrases = [
         transliteration: 'Chom-pûu',
         english: 'Rose Apple',
         audio: 'rose_apple.mp3'
+    },
+    {
+        category: 'fruits',
+        thai: 'ลำไย',
+        transliteration: 'Lam-yai',
+        english: 'Longan',
+        audio: 'longan.mp3'
+    },
+
+    // At the Condo
+    {
+        category: 'condo',
+        thai: 'ค่าส่วนกลางจ่ายเมื่อไหร่ครับ',
+        transliteration: 'Kâa sùan-glaang jàai mûea-rài kráp',
+        english: 'When is the management Fee due?',
+        audio: 'management_fee.mp3'
+    },
+    {
+        category: 'condo',
+        thai: 'สระว่ายน้ำเปิดไหมครับ',
+        transliteration: 'Sà-wâai-náam bpèrt mǎi kráp',
+        english: 'Is the swimming pool open?',
+        audio: 'pool_open.mp3'
+    },
+    {
+        category: 'condo',
+        thai: 'ขอพบผู้จัดการหน่อยครับ',
+        transliteration: 'Kǒr póp pûu-jàt-gaan nòi kráp',
+        english: 'Can I speak to the manager?',
+        audio: 'speak_manager.mp3'
+    },
+    {
+        category: 'condo',
+        thai: 'ช่วยเรียกช่างมาดูห้องหน่อยครับ',
+        transliteration: 'Chûai rîak châang maa duu hông nòi kráp',
+        english: 'I need the engineer to look at something in my condo',
+        audio: 'call_engineer.mp3'
+    },
+    {
+        category: 'condo',
+        thai: 'ลิฟต์ใช้ได้ไหมครับ',
+        transliteration: 'Líp chái dâi mǎi kráp',
+        english: 'Is the elevator working?',
+        audio: 'elevator_working.mp3'
+    },
+    {
+        category: 'condo',
+        thai: 'แอร์เสียครับ',
+        transliteration: 'Air sǐa kráp',
+        english: 'My air conditioner is not working',
+        audio: 'ac_broken.mp3'
+    },
+    {
+        category: 'condo',
+        thai: 'ท่อน้ำตันครับ',
+        transliteration: 'Tôr-náam dtan kráp',
+        english: 'The drain is blocked',
+        audio: 'drain_blocked.mp3'
+    },
+    {
+        category: 'condo',
+        thai: 'ส้วมเสียครับ',
+        transliteration: 'Sûam sǐa kráp',
+        english: 'My toilet is broken',
+        audio: 'toilet_broken.mp3'
+    },
+    {
+        category: 'condo',
+        thai: 'มีน้ำรั่วครับ',
+        transliteration: 'Mee náam rûa kráp',
+        english: 'I have a water leak',
+        audio: 'water_leak.mp3'
+    },
+    {
+        category: 'condo',
+        thai: 'ช่วยมาทำความสะอาดห้องหน่อยครับ',
+        transliteration: 'Chûai maa tam-kwaam-sà-àat hông nòi kráp',
+        english: 'Can you come and clean my apartment?',
+        audio: 'clean_room.mp3'
+    },
+    {
+        category: 'condo',
+        thai: 'เครื่องชงกาแฟเสียครับ',
+        transliteration: 'Krûeang chong gaa-fae sǐa kráp',
+        english: 'My coffee maker is broken',
+        audio: 'coffee_maker_broken.mp3'
     },
     {
         category: 'fruits',
